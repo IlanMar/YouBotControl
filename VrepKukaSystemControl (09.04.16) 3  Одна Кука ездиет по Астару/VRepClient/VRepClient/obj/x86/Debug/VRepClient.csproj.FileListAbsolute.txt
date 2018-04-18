@@ -249,3 +249,15 @@ C:\Users\ilanm\Desktop\для отправки в ГИТ\VrepKukaSystemControl (
 C:\Users\ilanm\Desktop\для отправки в ГИТ\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.MapForm.resources
 C:\Users\ilanm\Desktop\для отправки в ГИТ\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.Properties.Resources.resources
 C:\Users\ilanm\Desktop\для отправки в ГИТ\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.csproj.GenerateResource.Cache
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\bin\Debug\VRepClient.exe.config
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.exe
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\bin\Debug\VRepClient.exe
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\bin\Debug\VRepClient.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\bin\Debug\VRepAdapter.dll
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\bin\Debug\VRepAdapter.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.csprojResolveAssemblyReference.cache
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.Form1.resources
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.MapForm.resources
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.Properties.Resources.resources
+D:\GitRepositoryOne\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\VRepClient\obj\x86\Debug\VRepClient.csproj.GenerateResource.Cache

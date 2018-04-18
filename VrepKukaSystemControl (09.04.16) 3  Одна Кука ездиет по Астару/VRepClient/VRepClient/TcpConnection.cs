@@ -1,7 +1,4 @@
-﻿//WinRos project by Sekou Diane (sekoudiane1990@gmail.com) and Alexey Novoselsky
-//Moscow, MIREA, 2014-2015
-//The aim of the project is to control a group of Ubuntu-driven robots (youBots) from Windows laptop
-
+﻿
 using System;
 using System.IO;
 using System.Net;
