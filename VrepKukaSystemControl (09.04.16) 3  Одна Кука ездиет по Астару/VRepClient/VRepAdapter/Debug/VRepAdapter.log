@@ -1,0 +1,14 @@
+﻿  Stdafx.cpp
+  AssemblyInfo.cpp
+AssemblyInfo.cpp(40): warning C4947: 'RequestMinimum' : marked as obsolete
+          Message: 'Assembly level declarative security is obsolete and is no longer enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information.'
+  extApi.cpp
+  extApiPlatform.cpp
+  Adding library: Winmm.lib
+  Adding library: Ws2_32.lib
+extApiPlatform.cpp(232): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+  VRepAdapter.cpp
+  Generating Code...
+     Creating library C:\Users\ilanm\Desktop\фы  юЄяЁртъш т ├╚╥\VrepKukaSystemControl (09.04.16) 3  ╬фэр ╩єър хчфшхЄ яю └ёЄрЁє\VRepClient\Debug\VRepAdapter.lib and object C:\Users\ilanm\Desktop\фы  юЄяЁртъш т ├╚╥\VrepKukaSystemControl (09.04.16) 3  ╬фэр ╩єър хчфшхЄ яю └ёЄрЁє\VRepClient\Debug\VRepAdapter.exp
+  VRepAdapter.vcxproj -> C:\Users\ilanm\Desktop\для отправки в ГИТ\VrepKukaSystemControl (09.04.16) 3  Одна Кука ездиет по Астару\VRepClient\Debug\VRepAdapter.dll
