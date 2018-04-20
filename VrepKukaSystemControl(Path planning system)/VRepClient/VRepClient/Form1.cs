@@ -25,16 +25,12 @@ namespace VRepClient
         
         public RobotAdapter ra; //экземпляр класса ra - robot adapter
         public Drive RobDrive;
-       public  SequencePoints SQ;//объект класса sequencePoints
-       public Map map;//объект класса Map
-       public SearchInGraph SiG;//объект класса поиска по графу
-        //все что в абзаце ниже, удалить
-       // public tacticalLevel TactLevel = new tacticalLevel();
-       // public PotField PotFiel = new PotField();
+        public  SequencePoints SQ;//объект класса sequencePoints
+        public Map map;//объект класса Map
+        public SearchInGraph SiG;//объект класса поиска по графу        
         public KukaPotField KukaPotField = new KukaPotField();
         public int PotfieldButtonA = 0;//если кнопка нажате то методм PotField доступен
         public int KukaPotButtonB = 0;//если кнопка нажата то работает метод кука.
-      //  public Bitmap Rob = new Bitmap(@"C:\Users\Илан\Pictures\Robot.jpg");
         public List<Point> ListPoints = new List<Point>();        
         
         private void button1_Click(object sender, EventArgs e)
@@ -181,12 +177,7 @@ namespace VRepClient
 
         private void btsend_Click(object sender, EventArgs e)
         {
-       //     if (tc == null) 
-        //    {
-
-        //        return;
-       //     }
-       //     tc.Send(rtb_send.Text); 
+      
         }
 
         private void rtb_send_TextChanged(object sender, EventArgs e)
@@ -238,8 +229,7 @@ namespace VRepClient
             if (ra != null && SQ != null && Drive != null && map != null && map.graph != null)
          {          
 
-            int yy = 0;
-            int xx=0;
+         
           //  this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
           //  if (10==timer1.Tick) { }               
                /*
@@ -337,8 +327,7 @@ namespace VRepClient
          e.Graphics.DrawEllipse(Pens.Chocolate, (int)start.X*W2-2*W2,pictureBox1.Height + ((-1) * (int)start.Y)*H2-2*W2, 20, 20);
          
      }
-          //  e.Graphics.Clear(Color.Teal);
-           // e.Graphics.Clear();
+          
             if (map != null && map.invalidateform == true)//обновляем форму
             {
                 pictureBox1.Invalidate();//вызов отрисовки на пикчербоксе перенести в более логичное мето

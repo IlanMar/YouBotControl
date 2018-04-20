@@ -20,7 +20,6 @@ namespace VRepClient
         {
             string g = var;
 
-
             if (g != "")
             {
                 string someString = var;
@@ -31,14 +30,7 @@ namespace VRepClient
                 for (int i = 0; i < words.Length; i++)//записываем данные с ледара в массив, в сроках x y z
                 {
                     LaserDataKuka[i] = float.Parse(words[h], System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-                    h++;
-                    /*
-                   for (int j = 0; j < 3; j++) 
-                    {
-                        LaserData[i, j] = float.Parse(words[h], System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-                        if (LaserData[i, j] == 0) { LaserData[i, j] = 999; }
-                        h++;
-                    }*/
+                    h++;              
                 }
             }
 
@@ -53,7 +45,6 @@ namespace VRepClient
                 for (int i = 0; i < 3; i++)
                 {
                     RobLocDataKuka[i] = float.Parse(words[i], System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-
                 }
                 RobLocDataKuka[2] = RobLocDataKuka[2] * -1;
             }
@@ -67,8 +58,7 @@ namespace VRepClient
         double Phi; //пеленг на цель
         double RobDirect;//направление робота
         double TargetDirection;
-        double DistToTarget;//расстояние до цели
-        //public tacticalLevel TactLevel = new tacticalLevel();
+        double DistToTarget;//расстояние до цели        
         float Xold = 0;
         float Yold = 0;
         
@@ -81,14 +71,11 @@ namespace VRepClient
             int k = 0;
             double MinDist = 3;
             for (int i = 0; i < LaserDataKuka.Length-1; i++)
-            {
-                //float[,] m = TactLevel.GetOfLaserData();
-                //DistData[i] = M[i];
+            {               
 
                 if (LaserDataKuka[i] < MinDist)
                 {
                     MinDist = LaserDataKuka[i]; h = i;
-
                 }
             }
             /*
@@ -129,20 +116,11 @@ namespace VRepClient
                 {
                     Phi = (-1) * (Math.PI * 2 - TargetDirection + RobDirect);
                 }
-
             }
             Xold = Xrob;
             Yold = Yrob;
-
-
-            /*
-                 if (Phi > 0.3 || Phi < -0.3 && MinDist>1) //поворачивает в стороону цели если отклонение большое
-                 {
-                     if (Phi > 0) { right = 3; left = -3; }
-                     //right = -2 * (-1) * (float)Phi; left = (-2 * (float)Phi);
-                     if (Phi < 0) { right = -3; left = 3; }
-                     
-                 }*/
+            
+           
 
             if (DistToTarget > 0.4)//едет к цели при небольшом отклонении
             {//дифференциальный регулятор
@@ -156,10 +134,10 @@ namespace VRepClient
                 float R = Vr / rw;
                 float L = Vl / rw;
                 RV = (L - R) ; //RotateVelocity
-                  FBV = (R + L) / 2; //FrontBackVelocity
-              //  right = (float)Math.Round(Vr, 2);//умножить на 0.1 для настоящей куки
+                FBV = (R + L) / 2; //FrontBackVelocity
+                //right = (float)Math.Round(Vr, 2);//умножить на 0.1 для настоящей куки
                 //left = (float)Math.Round(Vl, 2);//умножить на 0.1 для настоящей куки
-                 right = R;//умножить на 0.1 для настоящей куки
+                right = R;//умножить на 0.1 для настоящей куки
                 left = L;//умножить на 0.1 для настоящей куки
             }
 
