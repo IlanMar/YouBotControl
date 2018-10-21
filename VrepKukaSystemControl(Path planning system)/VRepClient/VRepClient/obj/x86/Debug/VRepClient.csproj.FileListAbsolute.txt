@@ -273,3 +273,15 @@ D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient\VRepC
 D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient\VRepClient\obj\x86\Debug\VRepClient.csproj.GenerateResource.Cache
 D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient\VRepClient\obj\x86\Debug\VRepClient.exe
 D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient\VRepClient\obj\x86\Debug\VRepClient.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\bin\Debug\VRepClient.exe.config
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.exe
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\bin\Debug\VRepClient.exe
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\bin\Debug\VRepClient.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\bin\Debug\VRepAdapter.dll
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\bin\Debug\VRepAdapter.pdb
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.csprojResolveAssemblyReference.cache
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.Form1.resources
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.MapForm.resources
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.Properties.Resources.resources
+D:\GitRepositoryOne\VrepKukaSystemControl(Path planning system)\VRepClient — копия\VRepClient\obj\x86\Debug\VRepClient.csproj.GenerateResource.Cache

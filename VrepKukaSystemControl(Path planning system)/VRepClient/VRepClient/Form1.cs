@@ -20,7 +20,9 @@ namespace VRepClient
             InitializeComponent();
             f1 = this;
             
-            f2.Show();         
+            f2.Show();     
+    
+
         }
         
         public RobotAdapter ra; //экземпляр класса ra - robot adapter
@@ -42,7 +44,7 @@ namespace VRepClient
         {
 
         }
-
+        Graphics g;
         private void timer1_Tick(object sender, EventArgs e)
         {
             //pictureBox1.Invalidate();
@@ -153,7 +155,7 @@ namespace VRepClient
         {
 
         }
-
+        void invoke(Action a) { Invoke(a); }
         public static Form1 f1;
 
         private void bt_tcp_test_Click(object sender, EventArgs e)
@@ -207,6 +209,15 @@ namespace VRepClient
             RobDrive = new Drive();
             map = new Map();
             SiG = new SearchInGraph();
+
+            int mapWidthPxls = map.Xmax * (CellSize + 1) + 1, mapHeightPxls = map.Ymax * (CellSize + 1) + 1;
+
+            //invoke(() =>
+            //{
+                pictureBox1.Image = new Bitmap(mapWidthPxls, mapHeightPxls);
+                g = Graphics.FromImage(pictureBox1.Image);
+            //});
+           
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
@@ -223,55 +234,30 @@ namespace VRepClient
         {
 
         }
-        
+        int CellSize = 4;
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             if (ra != null && SQ != null && Drive != null && map != null && map.graph != null)
-         {          
-
+         {         
+                    
          
-          //  this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-          //  if (10==timer1.Tick) { }               
-               /*
-              
-                    for (int l = 0; l < map.Ymax + 1; l++)//отрисовываем сетку
-                    {
-                        e.Graphics.DrawLine(new Pen(Color.Black), 0, yy, pictureBox1.Width, yy);
-                        // xx = xx + 50;
-                        yy = yy + pictureBox1.Height / map.Ymax;
-                    }
-                    for (int l = 0; l < map.Xmax + 1; l++)
-                    {
-                        e.Graphics.DrawLine(new Pen(Color.Black), xx, 0, xx, pictureBox1.Height);
-                        xx = xx + pictureBox1.Width / map.Xmax;
-                    }
-                    System.Drawing.SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Red);
+
+             int MapWidth = map.Xmax;
+             int MapHeight = map.Ymax;
+             // Размер карты в пискелях.
+             int mapWidthPxls = MapWidth * (CellSize + 1) + 1,
+                 mapHeightPxls = MapHeight * (CellSize + 1) + 1;
              
-           */
+
+             // Заливаем весь битмап:
+             g.Clear(Color.White);
+
+             // Рисуем сетку:
+             for (int x = 0; x <= MapWidth; x++)
+                 g.DrawLine(Pens.LightGray, x * (CellSize + 1), 0, x * (CellSize + 1), mapHeightPxls);
+             for (int y = 0; y <= MapHeight; y++)
+                 g.DrawLine(Pens.LightGray, 0, y * (CellSize + 1), mapWidthPxls, y * (CellSize + 1));
             
-                int MapWidth = map.Xmax;
-                int MapHeight = map.Ymax;
-                int CellSize = 4;
-                // Размер карты в пискелях.
-                int mapWidthPxls = MapWidth * (CellSize + 1) + 1,
-                    mapHeightPxls = MapHeight * (CellSize + 1) + 1;
-                Bitmap mapImg = new Bitmap(mapWidthPxls, mapHeightPxls);
-                Graphics g = Graphics.FromImage(mapImg);
-
-                // Заливаем весь битмап:
-                g.Clear(Color.White);
-
-                // Рисуем сетку:
-                for (int x = 0; x <= MapWidth; x++)
-                    g.DrawLine(Pens.LightGray, x * (CellSize + 1), 0, x * (CellSize + 1), mapHeightPxls);
-                for (int y = 0; y <= MapHeight; y++)
-                    g.DrawLine(Pens.LightGray, 0, y * (CellSize + 1), mapWidthPxls, y * (CellSize + 1));
-                PictureBox p = pictureBox1;
-                if (p.Image != null)
-                    p.Image.Dispose();
-
-                pictureBox1.Image = mapImg;
-                g.Dispose();
             
             
          for (int i = 0; i < map.Xmax; i++) //закрашиваем ячейки с препядствиями
@@ -287,21 +273,7 @@ namespace VRepClient
                      Rectangle rect = new Rectangle((i) * W, pictureBox1.Height + ((-1) * k * H) , W, H);                  
                      e.Graphics.FillRectangle(blueBrush, rect);                  
                  }
-                 /*
-                 if (map.graph[i, k] ==0 )//закрашиваем пустые ячейки прозрачным цветом
-                 {
-                     int H = (int)(pictureBox1.Height / map.Ymax);
-                     int W = (int)(pictureBox1.Width / map.Xmax);
-                    
-                     Color brushColor = Color.FromArgb(250 / 100 * 0, 255, 0, 0);
-                     SolidBrush blueBrush = new SolidBrush(brushColor);
-                     // Create rectangle.//ниже путаница со знаками, по Иксу двигается а по У нет
-                     Rectangle rect = new Rectangle((i) * W, pictureBox1.Height + ((-1) * k * H), W, H);
-
-                     // Fill rectangle to screen.
-                     e.Graphics.FillRectangle(blueBrush, rect);
-                 }*/
-                 
+                
              }
          }
          if (ListPoints != null)//ресуем получившийся маршрут
@@ -332,6 +304,7 @@ namespace VRepClient
             {
                 pictureBox1.Invalidate();//вызов отрисовки на пикчербоксе перенести в более логичное мето
             }
+            pictureBox1.Invalidate();
 
         }
         private void pictureBox1_Click(object sender, EventArgs e)

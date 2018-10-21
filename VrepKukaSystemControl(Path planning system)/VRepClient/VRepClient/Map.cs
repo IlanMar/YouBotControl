@@ -33,12 +33,14 @@ namespace VRepClient
                 c = LedData[i];
                 x = i * A;
                 x=x*0.0174533f-OdomData[2];
-
-                float LedRX = 0.344f * (float)Math.Cos(OdomData[2]);
-               float LedRY = 0.344f * (float)Math.Sin(OdomData[2]);
-                    LedDataMass[i, 0] = ((float)Math.Cos(x) * c)+OdomData[0]+LedRY;//значение по оси Х
-                    LedDataMass[i, 1] = ((float)Math.Sin(x) * c)+OdomData[1]+LedRX;// значение по оси Y   
+                if (OdomData[2] > 1.571 || OdomData[2] < 1.570)
+                {
+                    float LedRX = 0.344f * (float)Math.Cos(OdomData[2]);
+                    float LedRY = 0.344f * (float)Math.Sin(OdomData[2]);
+                    LedDataMass[i, 0] = ((float)Math.Cos(x) * c) + OdomData[0] + LedRY;//значение по оси Х
+                    LedDataMass[i, 1] = ((float)Math.Sin(x) * c) + OdomData[1] + LedRX;// значение по оси Y   
                     u = 1;
+                }
                     
             }
             GlobalMapList.Add(new ObstaclesPoint { X = 0f, Y = 0f, weight = 1 });//задаю две точки по умолчанию с обеих сторон от робота
