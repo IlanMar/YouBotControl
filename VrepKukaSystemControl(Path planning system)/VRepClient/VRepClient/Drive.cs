@@ -25,7 +25,7 @@ namespace VRepClient
             //определяем относительное направление цели цели
             float Xpel = GoalPointX - RobX;
             float Ypel = GoalPointY - RobY;
-            TargetDirection = (float)Math.Atan2(Xpel, Ypel);//надо просто RobA-
+            TargetDirection = (float)Math.Atan2(Xpel, Ypel);  //надо просто RobA-
             DistToTarget = (float)Math.Sqrt(Xpel * Xpel + Ypel * Ypel);
                         
                
