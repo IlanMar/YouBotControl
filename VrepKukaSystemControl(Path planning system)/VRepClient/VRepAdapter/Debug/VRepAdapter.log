@@ -1,16 +1,4 @@
-﻿  Stdafx.cpp
-  AssemblyInfo.cpp
-AssemblyInfo.cpp(40): warning C4947: 'System::Security::Permissions::SecurityAction::RequestMinimum': marked as obsolete
-  AssemblyInfo.cpp(40): note: Message: 'Assembly level declarative security is obsolete and is no longer enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information.'
-  extApi.cpp
-  extApiPlatform.cpp
-  Adding library: Winmm.lib
-  Adding library: Ws2_32.lib
-extApiPlatform.cpp(232): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-  VRepAdapter.cpp
-  Generating Code...
-  .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+﻿  VRepAdapter.cpp
      Creating library C:\Users\ilanm\Source\Repos\IlanMar\YouBotControl\VrepKukaSystemControl(Path planning system)\VRepClient\Debug\VRepAdapter.lib and object C:\Users\ilanm\Source\Repos\IlanMar\YouBotControl\VrepKukaSystemControl(Path planning system)\VRepClient\Debug\VRepAdapter.exp
   VRepAdapter.vcxproj -> C:\Users\ilanm\Source\Repos\IlanMar\YouBotControl\VrepKukaSystemControl(Path planning system)\VRepClient\Debug\VRepAdapter.dll
   VRepAdapter.vcxproj -> C:\Users\ilanm\Source\Repos\IlanMar\YouBotControl\VrepKukaSystemControl(Path planning system)\VRepClient\Debug\VRepAdapter.pdb (Full PDB)

@@ -11,7 +11,7 @@ using namespace System;
 #endif
 
 namespace VRepAdapter {
-	
+
 	public ref class VRepFunctions
 	{
 	public:
@@ -21,8 +21,8 @@ namespace VRepAdapter {
 			simxChar* name = (simxChar*)Helper::NativeFromString(signalName).ToPointer();
 
 			simxUChar* pBuffer = extApi_allocateBuffer(100000);//a buffer for the string that comes from V-REP
-			
-		
+
+
 			int len = 0; //recieved string length (typically 7000 bytes - smaller than buffer size)
 
 
@@ -30,25 +30,25 @@ namespace VRepAdapter {
 			// specifically at extApiPlatform.cpp, line 254, in the function 'extApi_releaseBuffer'
 			simxInt res = simxGetStringSignal(ClientID, name, &pBuffer, &len, simx_opmode_streaming); \
 
-			String^ str = "";
+				String^ str = "";
 
 			if (len > 0)
 			{
-				pBuffer[len-1] = '\0'; //string termination
+				pBuffer[len - 1] = '\0'; //string termination
 				//converting native string to C# string
 				IntPtr pt((void*)pBuffer);
 				str = Helper::StringFromNative(pt);
 			}
 			//extApi_releaseBuffer(pBuffer); //called automatically
 
-			
+
 			return str;
 		}
 
 		static int Start(String ^ip, int port)
 		{
-			simxChar* z=(simxChar*)Helper::NativeFromString(ip).ToPointer();
-			int clientID=simxStart(z,port,true,true,2000,5);
+			simxChar* z = (simxChar*)Helper::NativeFromString(ip).ToPointer();
+			int clientID = simxStart(z, port, true, true, 2000, 5);
 			return clientID;
 		}
 
@@ -58,9 +58,9 @@ namespace VRepAdapter {
 		}
 		static int ReadProximitySensor(int clientID, int sensorHandle, [Out] Byte% sensorTrigger)
 		{
-			simxUChar sensorTrigger_=0;
-			int res= simxReadProximitySensor(clientID,sensorHandle, &sensorTrigger_,NULL,NULL,NULL,simx_opmode_continuous);
-			sensorTrigger=sensorTrigger_;
+			simxUChar sensorTrigger_ = 0;
+			int res = simxReadProximitySensor(clientID, sensorHandle, &sensorTrigger_, NULL, NULL, NULL, simx_opmode_continuous);
+			sensorTrigger = sensorTrigger_;
 			return res;
 		}
 		static void SetJointTargetVelocity(int clientID, int sensorHandle, float motorSpeed)
@@ -79,10 +79,10 @@ namespace VRepAdapter {
 		}
 		static int GetObjectHandle(int clientID, String^ name, [Out] int% handle)
 		{
-			simxChar* z=(simxChar*)Helper::NativeFromString(name).ToPointer();
-			int handle_=0;
-			int res= simxGetObjectHandle(clientID, z, &handle_, simx_opmode_oneshot_wait);
-			handle=handle_;
+			simxChar* z = (simxChar*)Helper::NativeFromString(name).ToPointer();
+			int handle_ = 0;
+			int res = simxGetObjectHandle(clientID, z, &handle_, simx_opmode_oneshot_wait);
+			handle = handle_;
 			return res;
 		}
 

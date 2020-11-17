@@ -12,19 +12,13 @@ namespace VRepClient
     public class TcpConnection
     {
         public TcpClient tc;
-
         private StreamReader reader;
         private StreamWriter writer;
-
         public Thread tc_thread;
-
         private const string confirmation = "#ok#";
         private const string time_check = "#time_check#";
-
         public delegate void EventDel(string info);
-
         private EventDel onConnected, onDataReceived, onDisconnect;
-
         private System.Windows.Forms.Timer timer_keep_alive;
 
         public bool IsConnected()
@@ -32,7 +26,6 @@ namespace VRepClient
             if (tc == null || tc_thread == null) return false;
 
             bool res = (DateTime.Now - t_last_msg_from_server).Seconds < 60;
-
             return res;
         }
 
@@ -60,11 +53,11 @@ namespace VRepClient
             if (writer != null) { writer.Dispose(); writer = null; }
         }
 
-        public bool IsDisposed { get { return tc_thread==null; } }
+        public bool IsDisposed { get { return tc_thread == null; } }
+
         public void Connect(string ip, string port)
         {
             tc = new TcpClient();
-
             var serverEndPoint = new IPEndPoint(IPAddress.Parse(ip), int.Parse(port));
 
             if (tc.Client.RemoteEndPoint == null || tc.Client.RemoteEndPoint.ToString() != serverEndPoint.ToString())
@@ -76,7 +69,7 @@ namespace VRepClient
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Bad endpoint: ID = "+(ID+1));
+                    MessageBox.Show("Bad endpoint: ID = " + (ID + 1));
                     tc = null;
                     return;
                 }
@@ -91,7 +84,7 @@ namespace VRepClient
             t_last_msg_from_server = DateTime.Now;
 
             if (!IsConnected()) throw new Exception("Couldn't connect");
-            if(onConnected!=null) onConnected("Connected!");
+            if (onConnected != null) onConnected("Connected!");
             Send("#start#");
 
             timer_keep_alive = new System.Windows.Forms.Timer();
@@ -109,7 +102,7 @@ namespace VRepClient
             };
         }
 
-        int time_check_skipper = 5, tcs=0;
+        int time_check_skipper = 5, tcs = 0;
 
         public void Disconnect(string reason, bool show_mb)
         {
@@ -165,11 +158,11 @@ namespace VRepClient
                         {
                             data = reader.ReadLine();
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
                         }
-                        
+
                     }
                 }
                 if (data != null)
@@ -178,11 +171,11 @@ namespace VRepClient
                     if (data == confirmation)
                     {
                         t_last_msg_from_server = DateTime.Now;
-                    } 
+                    }
                     else if (data == time_check)
                     {
                         hpt.Stop();
-                        delay = 0.5f*delay+0.5f*(float)hpt.Duration;
+                        delay = 0.5f * delay + 0.5f * (float)hpt.Duration;
                     }
                     else
                     {
@@ -206,7 +199,7 @@ namespace VRepClient
             if (tc == null)
             {
                 msg_box_shown = true;
-                if(!msg_box_shown) MessageBox.Show("Not connected");
+                if (!msg_box_shown) MessageBox.Show("Not connected");
                 return;
             }
 
@@ -220,7 +213,7 @@ namespace VRepClient
                 }
                 catch
                 {
-                    Disconnect("Can't send (server stopped?): ID = "+(ID+1), true);
+                    Disconnect("Can't send (server stopped?): ID = " + (ID + 1), true);
                 }
             }
         }

@@ -3,13 +3,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
-using System.Collections.Generic;
-using System.Linq;
 using System.Collections.ObjectModel;
-// System.Collections.Generic;//67tt6u65u65hh
+
 namespace VRepClient
 {
     public class PathNode
@@ -29,7 +25,7 @@ namespace VRepClient
     public class SearchInGraph
     {
         public List<Point> FindPath(float[,] field, Point start, Point goal) //убрано static
-        {//шаг 1
+        {   //шаг 1
             var closedSet = new Collection<PathNode>();
             var openSet = new Collection<PathNode>();
             //шаг 2
@@ -40,7 +36,9 @@ namespace VRepClient
                 PathLengthFromStart = 0,
                 HeuristicEstimatePathLength = GetHeuristicPathLenght(start, goal)
             };
+
             openSet.Add(startNode);
+
             while (openSet.Count > 0)
             {
                 //Шаг 3 
@@ -62,11 +60,11 @@ namespace VRepClient
                         openSet.Add(neighbourNode);
                     else
                         if (openNode.PathLengthFromStart > neighbourNode.PathLengthFromStart)
-                        {
-                            //Шаг 9
-                            openNode.CameFrom = currentNode;
-                            openNode.PathLengthFromStart = neighbourNode.PathLengthFromStart;
-                        }
+                    {
+                        //Шаг 9
+                        openNode.CameFrom = currentNode;
+                        openNode.PathLengthFromStart = neighbourNode.PathLengthFromStart;
+                    }
                 }
             }
             //Шаг 10
@@ -96,15 +94,16 @@ namespace VRepClient
             neighbourPoints[5] = new Point(pathNode.Position.X - 1, pathNode.Position.Y - 1);
             neighbourPoints[6] = new Point(pathNode.Position.X - 1, pathNode.Position.Y + 1);
             neighbourPoints[7] = new Point(pathNode.Position.X + 1, pathNode.Position.Y - 1);
-            foreach (var point in neighbourPoints)
-            {//проверяем не вышли ли за границы карты
+
+            foreach (var point in neighbourPoints) //проверяем не вышли ли за границы карты
+            {
                 if (point.X < 0 || point.X >= field.GetLength(0))
                     continue;
                 if (point.Y < 0 || point.Y >= field.GetLength(1))
                     continue;
                 //проверяем что по клетке можно ходить
                 //проверяем пять ближайших клеток
-                bool key = false;
+
                 int freeNode = 0;
                 for (int i = -3; i < 4; i++)
                 {
@@ -122,13 +121,14 @@ namespace VRepClient
                         }
                     }
                 }
-                // if ((field[point.X, point.Y] != 0) && (field[point.X, point.Y] < 1)&&freeNode>49)
-                // continue;
+
                 float weight;
+
                 if (pathNode.Position.X != point.X && pathNode.Position.Y != point.Y)//диагональные смещения стоят 1,4 а прямые 1
                     weight = 1.4f;
                 else
                     weight = 1;
+
                 if ((field[point.X, point.Y] < 2) && freeNode == 49)
                 {
                     //зополняем данные для точки маршрута
@@ -144,6 +144,7 @@ namespace VRepClient
             }
             return result;
         }
+
         private static List<Point> GetPathForNode(PathNode pathNode)
         {
             var result = new List<Point>();
@@ -156,7 +157,5 @@ namespace VRepClient
             result.Reverse();
             return result;
         }
-
     }
-
 }
