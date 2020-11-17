@@ -13,6 +13,7 @@ namespace VRepClient
         public float TargetDirection;
         public float RobotDirection;//переменная для вывода на форму чрез форму
         public float DistToTarget;
+
         public void GetDrive(float RobX, float RobY, float RobA, float GoalPointX, float GoalPointY, float Xmax, float Ymax)
         {
             GoalPointX = GoalPointX * 0.1f;
@@ -67,7 +68,6 @@ namespace VRepClient
                 right = 0;
                 left = 0;
             }
-
             //   right = 0; left = 0;///
             //   right = 2f; left = -2f;///
             //   right = 3; left = 3;///

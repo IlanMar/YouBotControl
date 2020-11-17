@@ -14,6 +14,7 @@ namespace VRepClient
         public float PathLengthFromStart { get; set; }//Длина пути от старта до точки (G)
         public PathNode CameFrom { get; set; }//Точка из которой пришли в эту точку
         public float HeuristicEstimatePathLength { get; set; }//Примерное расстояние от точки до цели (H)
+
         public float EstimateFullPathLength
         {
             get
@@ -22,6 +23,7 @@ namespace VRepClient
             }
         }
     }
+
     public class SearchInGraph
     {
         public List<Point> FindPath(float[,] field, Point start, Point goal) //убрано static
@@ -103,8 +105,8 @@ namespace VRepClient
                     continue;
                 //проверяем что по клетке можно ходить
                 //проверяем пять ближайших клеток
-
                 int freeNode = 0;
+
                 for (int i = -3; i < 4; i++)
                 {
                     for (int k = -3; k < 4; k++)
@@ -139,6 +141,7 @@ namespace VRepClient
                         PathLengthFromStart = pathNode.PathLengthFromStart + GetDistanceBetweenNeighbours(weight),
                         HeuristicEstimatePathLength = GetHeuristicPathLenght(point, goal)
                     };
+
                     result.Add(neighbourNode);
                 }
             }
@@ -149,11 +152,13 @@ namespace VRepClient
         {
             var result = new List<Point>();
             var currentNode = pathNode;
+
             while (currentNode != null)
             {
                 result.Add(currentNode.Position);
                 currentNode = currentNode.CameFrom;
             }
+
             result.Reverse();
             return result;
         }

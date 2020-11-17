@@ -1,6 +1,5 @@
 ﻿//Margolin Ilan 2016
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace VRepClient

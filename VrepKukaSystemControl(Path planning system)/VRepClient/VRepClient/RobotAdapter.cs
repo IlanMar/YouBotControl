@@ -46,11 +46,12 @@ namespace VRepClient
                 right = RobDrive.right * (-5f);
                 left = RobDrive.left * (-5f);
             }
+
             if (VRepFunctions.GetConnectionId(clientID) == -1) return;
 
             Byte sensorTrigger = (Byte)0;
+            int simulationTime = VRepFunctions.GetLastCmdTime(clientID);
 
-            int simulationTime = VRepFunctions.GetLastCmdTime(clientID);//??????
             if (simulationTime - driveBackStartTime < 3000)
                 driveBackStartTime = simulationTime;
             {
@@ -60,6 +61,7 @@ namespace VRepClient
                 VRepFunctions.SetJointTargetVelocity(clientID, rightMotorHandleA, right);
             }
         }
+
         public override void ReceiveLedData(string LedarData)
         {
             RobotLedData = new float[518];//более 1412 это бесконечность
@@ -98,8 +100,7 @@ namespace VRepClient
             RobotOdomData = new float[3];
 
             if (OdometryData != "")
-            {
-                // string someString = RobPos;
+            {               
                 string[] words = OdometryData.Split(new char[] { ';' });//парсим строку в массив words
 
                 for (int i = 0; i < 3; i++)
