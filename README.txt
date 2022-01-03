@@ -1,17 +1,36 @@
-Ìàðãîëèí Èëàí. ÌÈÐÝÀ 2018.
+ÐœÐ°Ñ€Ð³Ð¾Ð»Ð¸Ð½ Ð˜Ð»Ð°Ð½.  2018.
 
-Â äàííîì ïðîåêòå ðåàëèçîâàíà ñèñòåìà óïðàâëåíèÿ äâèæåíèåì ìîáèëüíûì ðîáîòîì KUKA Youbot. 
-÷àñòü íàïèñàíàÿ íà C++ ðåàëèçóåò Remote API è áûëà âçÿòà ñ îôèöèàëüíîãîñàéòà V-Rep(íóæíà äëÿ ïîäêëþ÷åíèå C# ïðîåêòà ê V-Rep). 
-×àñòü íà C# íàïèñàíà ìíîé è ðåàëèçóåò ìåòîäû è àëãîðèòìû äëÿ îáåñïå÷åíèÿ äâèæåíèÿ è
-êàðòîãðàôèðîâàíèÿ ìîáèëüíûì ðîáîòîì KUKA Youbot.  
+Ð’ Ð´Ð°Ð½Ð½Ð¾Ð¼ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ðµ Ñ€ÐµÐ°Ð»Ð¸Ð·Ð¾Ð²Ð°Ð½Ð° ÑÐ¸ÑÑ‚ÐµÐ¼Ð° ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸ÐµÐ¼ Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ð¼ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¾Ð¼ KUKA Youbot. 
+Ñ‡Ð°ÑÑ‚ÑŒ Ð½Ð°Ð¿Ð¸ÑÐ°Ð½Ð°Ñ Ð½Ð° C++ Ñ€ÐµÐ°Ð»Ð¸Ð·ÑƒÐµÑ‚ Remote API Ð¸ Ð±Ñ‹Ð»Ð° Ð²Ð·ÑÑ‚Ð° Ñ Ð¾Ñ„Ð¸Ñ†Ð¸Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ÑÐ°Ð¹Ñ‚Ð° V-Rep(Ð½ÑƒÐ¶Ð½Ð° Ð´Ð»Ñ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ C# Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð° Ðº V-Rep). 
+Ð§Ð°ÑÑ‚ÑŒ Ð½Ð° C# Ð½Ð°Ð¿Ð¸ÑÐ°Ð½Ð° Ð¼Ð½Ð¾Ð¹ Ð¸ Ñ€ÐµÐ°Ð»Ð¸Ð·ÑƒÐµÑ‚ Ð¼ÐµÑ‚Ð¾Ð´Ñ‹ Ð¸ Ð°Ð»Ð³Ð¾Ñ€Ð¸Ñ‚Ð¼Ñ‹ Ð´Ð»Ñ Ð¾Ð±ÐµÑÐ¿ÐµÑ‡ÐµÐ½Ð¸Ñ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ Ð¸
+ÐºÐ°Ñ€Ñ‚Ð¾Ð³Ñ€Ð°Ñ„Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ð¼ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¾Ð¼ KUKA Youbot.  
 
-Ïîðÿäîê çàïóñêà ïðîãðàììû ñî ñðåäîé V-Rep 
-1) Çàïóñòèòü âëîæåííóþ â ïðîåêò ñöåíó (KukaYoubotRemoteApi(demo 5).ttt).
-2) Çàïóñòèòü ðàáîòó ñöåíû â ñèìóëÿòîðå.
-3) Çàïóñòèòü VRepClient.sln
-4) çàäàòü êîîðäèíàòó öåëåâîé òî÷êè â èíòåðôåéñå ïðîãðàììû.
-5) Ïîñëå çàïóñêà ïðîãðàììû íàæàòü ïîñëåäîâàòåëüíî êíîïêè "VrepAdapter" -> "Connect" -> "Drive".
+ÐŸÐ¾Ñ€ÑÐ´Ð¾Ðº Ð·Ð°Ð¿ÑƒÑÐºÐ° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ ÑÐ¾ ÑÑ€ÐµÐ´Ð¾Ð¹ V-Rep 
+1) Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ Ð²Ð»Ð¾Ð¶ÐµÐ½Ð½ÑƒÑŽ Ð² Ð¿Ñ€Ð¾ÐµÐºÑ‚ ÑÑ†ÐµÐ½Ñƒ (KukaYoubotRemoteApi(demo 5).ttt).
+2) Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ†ÐµÐ½Ñ‹ Ð² ÑÐ¸Ð¼ÑƒÐ»ÑÑ‚Ð¾Ñ€Ðµ.
+3) Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ VRepClient.sln
+4) Ð·Ð°Ð´Ð°Ñ‚ÑŒ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñƒ Ñ†ÐµÐ»ÐµÐ²Ð¾Ð¹ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð² Ð¸Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹ÑÐµ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.
+5) ÐŸÐ¾ÑÐ»Ðµ Ð·Ð°Ð¿ÑƒÑÐºÐ° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ Ð½Ð°Ð¶Ð°Ñ‚ÑŒ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ ÐºÐ½Ð¾Ð¿ÐºÐ¸ "VrepAdapter" -> "Connect" -> "Drive".
 
 
-Ï.Ñ. ïðîåêò "VrepClient" äîëæåí áûòü íàçíà÷åí êàê çàïóñêàåìûé ïðîåêò.
-Ï.Ï.Ñ. Ïðîãðàììà ïðîâåðÿëàñü íà ðàáîòîñïîñîáíîñòü ñ ïðèëîãàþùåéñÿ âåðñèåé ðîáîòîòåõíè÷åñêîãî ñèìóëÿòîðà V-Rep. 
+ÐŸ.Ð¡. Ð¿Ñ€Ð¾ÐµÐºÑ‚ "VrepClient" Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð½Ð°Ð·Ð½Ð°Ñ‡ÐµÐ½ ÐºÐ°Ðº Ð·Ð°Ð¿ÑƒÑÐºÐ°ÐµÐ¼Ñ‹Ð¹ Ð¿Ñ€Ð¾ÐµÐºÑ‚.
+ÐŸ.ÐŸ.Ð¡. ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐ»Ð°ÑÑŒ Ð½Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ð¾ÑÐ¿Ð¾ÑÐ¾Ð±Ð½Ð¾ÑÑ‚ÑŒ Ñ Ð¿Ñ€Ð¸Ð»Ð¾Ð³Ð°ÑŽÑ‰ÐµÐ¹ÑÑ Ð²ÐµÑ€ÑÐ¸ÐµÐ¹ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¾Ñ‚ÐµÑ…Ð½Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ ÑÐ¸Ð¼ÑƒÐ»ÑÑ‚Ð¾Ñ€Ð° V-Rep. 
+
+
+Margolin Ilan.  2018.
+
+In this project, the motion control system of the KUKA Youbot mobile robot is implemented. 
+The part written in C++ implements the Remote API and was taken from the official V-Rep website (needed to connect the C# project to V-Rep). 
+The part in C# was written by me and implements methods and algorithms to ensure movement and
+mapping by the KUKA Youbot mobile robot. 
+
+The order of launching the program with the V-Rep environment 
+1) Launch the scene nested in the project (KukaYoubotRemoteApi(demo 5).ttt).
+2) Start the work of the scene in the simulator.
+3) Run VRepClient.sln
+4) set the coordinate of the target point in the program interface.
+5) After launching the program, press the buttons "VrepAdapter" -> "Connect" -> "Drive" sequentially.
+
+
+PS The "VrepClient" project should be designated as a startup project.
+PS The program was tested for operability with the attached version of the V-Rep robotic simulator.
